@@ -59,7 +59,7 @@ export default function HomePage() {
                  Profile
               </Link>
               <button
-                onClick={() => signOut()}
+                onClick={() => signOut({callbackUrl: "/"})}
                 className="px-6 py-3 bg-red-600 text-white rounded-lg font-semibold hover:bg-red-700 transition"
               >
                  Sign Out

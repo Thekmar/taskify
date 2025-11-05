@@ -106,7 +106,7 @@ export default function Todos() {
       >
         <h1> My Todos</h1>
         <button
-          onClick={() => signOut()}
+         onClick={() => signOut({callbackUrl: "/"})}
           style={{
             padding: "8px 16px",
             backgroundColor: "#ef4444",

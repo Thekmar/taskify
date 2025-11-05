@@ -2,6 +2,7 @@
 import { useSession, signOut } from "next-auth/react";
 import { useState } from "react";
 import Link from "next/link";
+import { redirect } from "next/dist/server/api-utils";
 
 export default function Profile() {
   const { data: session } = useSession();
@@ -45,7 +46,7 @@ export default function Profile() {
       >
         <h1> Profile</h1>
         <button
-          onClick={() => signOut()}
+          onClick={() => signOut({callbackUrl: "/"})}
           style={{
             padding: "8px 16px",
             backgroundColor: "#ef4444",
